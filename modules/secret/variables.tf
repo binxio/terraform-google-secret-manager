@@ -4,7 +4,7 @@
 #
 #------------------------------------------------------------------------------------------------------------------------
 variable "owner" {
-  description = "Owner of the resource. This variable is used to set the 'owner' label. Will be used as default for each subnet, but can be overridden using the subnet settings."
+  description = "Owner of the resource. This variable is used to set the 'owner' label."
   type        = string
 }
 

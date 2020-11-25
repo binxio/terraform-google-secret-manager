@@ -1,7 +1,7 @@
 locals {
-  owner       = var.owner
-  project     = "testapp"
-  environment = var.environment
+  owner       = "myself"
+  project     = "demo"
+  environment = "dev"
 
   purpose = "override-test"
   roles = {
@@ -27,7 +27,8 @@ locals {
 }
 
 module "secret" {
-  source = "../../modules/secret"
+  source  = "binxio/secret-manager/google"
+  version = "~> 1.0.0"
 
   owner       = local.owner
   project     = local.project
@@ -36,8 +37,4 @@ module "secret" {
   purpose     = local.purpose
   roles       = local.roles
   replication = local.replication
-}
-
-output "id" {
-  value = module.secret.id
 }

@@ -9,7 +9,7 @@ Provider Requirements:
 
 ## Input Variables
 * `environment` (required): Company environment for which the resources are created (e.g. dev, tst, acc, prd, all).
-* `owner` (required): Owner of the resource. This variable is used to set the 'owner' label. Will be used as default for each subnet, but can be overridden using the subnet settings.
+* `owner` (required): Owner of the resource. This variable is used to set the 'owner' label.
 * `project` (required): Company project name.
 * `purpose` (required): The purpose of the secret. This variable is appended to the secret_id and used to set the 'purpose' label.
 * `replication` (default `{"automatic":true}`): The replication to be used

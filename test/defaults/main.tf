@@ -2,7 +2,7 @@ locals {
   project     = "testapp"
   environment = var.environment
 
-  purpose = "1default-test"
+  purpose = "default-test"
 }
 
 module "secret" {
