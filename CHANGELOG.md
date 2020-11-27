@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.1 (2020-11-27)
+
+### Fixes
+
+* Use `try` instead of `lookup` to get replication config
+
 ## v1.0.0 (2020-11-25)
 
 * Initial release

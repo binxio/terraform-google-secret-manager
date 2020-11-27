@@ -1,4 +1,5 @@
 locals {
+  owner       = var.owner
   project     = "testapp"
   environment = var.environment
 

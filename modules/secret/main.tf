@@ -23,14 +23,14 @@ resource "google_secret_manager_secret" "secret" {
   secret_id = local.secret_id
 
   replication {
-    automatic = lookup(var.replication, "automatic", null)
+    automatic = try(var.replication.automatic, null)
 
     dynamic "user_managed" {
-      for_each = lookup(var.replication, "user_managed", [])
+      for_each = try(var.replication.user_managed, [])
 
       content {
         dynamic "replicas" {
-          for_each = lookup(user_managed.value, "replicas", [])
+          for_each = try(user_managed.value.replicas, [])
 
           content {
             location = replicas.value.location
